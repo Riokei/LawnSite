@@ -1,0 +1,28 @@
+.bgimage {
+    width:100%;
+    height:800px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/edwin-chen-jIDgmQ8ueso-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+.alt-p {
+    padding-left: 0;
+    padding-right: 0;
+}
+.bgimage h5 {
+    color:white;
+    
+}
+.bgimage h1 {
+    color:white;
+    text-shadow:2px 2px #333;
+}
+
+.card-deck .card {
+    min-width: 220px;
+}
+.c-width {
+    max-width: 960px;
+}

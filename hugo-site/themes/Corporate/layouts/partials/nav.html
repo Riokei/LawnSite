@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">   
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ .Site.BaseURL }}">GENERIC LAWN CARE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">     
+                {{- if .IsHome }}                   
+               <li class="nav-item">
+                <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#prices">Pricing</a>
+            </li>
+               {{- else }}
+               <li class="nav-item">
+                <a class="nav-link" href="{{ .Site.BaseURL }}">Home</a>
+            </li>
+               {{- end }}
+                {{ $currentPage := . }}  
+                {{ range .Site.Menus.main }}                       
+                <li class="nav-item">                       
+                    <a class="nav-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" aria-current="page" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                </li> 
+               {{ end }}
+               
+               
+                
+                </ul>
+               
+            </ul>
+        </div>
+    </div>
+    
+</nav>
