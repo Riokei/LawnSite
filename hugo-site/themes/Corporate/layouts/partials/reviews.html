@@ -9,16 +9,17 @@
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner text-center py-5">
+          {{ range .Site.Data.reviews }}
           <div class="carousel-item active" data-bs-interval="10000">
             <div class="d-flex justify-content-center">
               <div class="row w-50">
                 <div class="col">
                   <figure class="">
                     <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
+                      <p>{{ .des }}</p>
                     </blockquote>
                     <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
+                      {{ .author }}
                     </figcaption>
                   </figure>
                   <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
@@ -32,10 +33,10 @@
                 <div class="col">
                   <figure class="">
                     <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
+                      <p>{{ .des }}</p>
                     </blockquote>
                     <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
+                      <cite title="Source Title">{{ .author }}</cite>
                     </figcaption>
                   </figure>
                   <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
@@ -49,10 +50,10 @@
                 <div class="col">
                   <figure class=" ">
                     <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
+                      <p>{{ .des }}</p>
                     </blockquote>
                     <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
+                      <cite title="Source Title">{{ .author }}</cite>
                     </figcaption>
                   </figure>
                   <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
@@ -66,120 +67,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <div class="d-flex justify-content-center">
-              <div class="row w-50">
-                <div class="col">
-                  <figure class="">
-                    <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                  </figure>
-                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="far fa-star fa-sm"></i></li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <figure class="">
-                    <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                  </figure>
-                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="far fa-star fa-sm"></i></li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <figure class=" ">
-                    <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                  </figure>
-                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="far fa-star fa-sm"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div class="row w-50">
-                <div class="col">
-                  <figure class="">
-                    <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                  </figure>
-                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="far fa-star fa-sm"></i></li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <figure class="">
-                    <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                  </figure>
-                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="far fa-star fa-sm"></i></li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <figure class=" ">
-                    <blockquote class="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                  </figure>
-                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="fas fa-star fa-sm"></i></li>
-                    <li><i class="far fa-star fa-sm"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          {{ end }}
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
